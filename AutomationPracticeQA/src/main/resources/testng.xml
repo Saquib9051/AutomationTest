@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="AutomationPracticeTestSuite">
+<listeners>
+		<listener class-name="com.qa.ExtentReporter.ExtentReporterNG" />
+	</listeners>
+
+  <test name="Automation Practice Test">
+    <classes>
+      <class name="com.qa.testcases.TC1Test"/>
+      <class name="com.qa.testcases.TC1Test2"/>
+      <class name="com.qa.testcases.TC1Test3"/>
+    </classes>
+  </test> 
+</suite> 
+
+
