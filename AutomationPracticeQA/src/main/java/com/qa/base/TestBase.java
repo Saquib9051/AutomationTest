@@ -31,7 +31,8 @@ public class TestBase {
 	public  TestBase() {
 		try {
 			prop= new Properties();
-			FileInputStream ip = new FileInputStream("D:\\AutomationWorkSpace\\AutomationPracticeQA\\src\\main\\java\\com\\qa\\config\\config.properties");
+			FileInputStream ip = new FileInputStream(System.getProperty("user.dir")
+					+"/src/main/java/com/qa/config/config.properties");
 			prop.load(ip);
 			
 		}catch (FileNotFoundException e) {

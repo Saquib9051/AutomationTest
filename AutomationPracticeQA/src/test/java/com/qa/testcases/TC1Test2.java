@@ -32,7 +32,7 @@ public class TC1Test2 extends TestBase {
 	
 	@Test(priority=2)
 	public void viewMsg() throws InterruptedException {
-		//tc2.viewPreviousOrder();
+		tc2.viewPreviousOrder();
 	}
 	
 	

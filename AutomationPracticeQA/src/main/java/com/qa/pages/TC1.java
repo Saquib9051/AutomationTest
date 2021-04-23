@@ -22,7 +22,7 @@ public class TC1 extends TestBase {
 	@FindBy(id="SubmitLogin")
 	WebElement signInBtn;
 	
-	@FindBy(xpath="//header/div[3]/div[1]/div[1]/div[6]/ul[1]/li[2]/a[1]")
+	@FindBy(xpath="//div[contains(text(),'Categories')]//following-sibling::ul/li[2]/a[@title='Dresses']")
 	WebElement dress;
 	
 	@FindBy(xpath="//body/div[@id='page']/div[2]/div[1]/div[3]/div[2]/ul[1]/li[1]/div[1]/div[1]/div[1]/a[1]/img[1]")

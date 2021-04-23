@@ -35,7 +35,7 @@ public class TC1Test3 extends TestBase {
 	
 	@Test(priority=2)
 	public void captureImageTest() throws InterruptedException, IOException {
-		//tc3.captureImagecolor();
+		tc3.captureImagecolor();
 	}
 	
 	

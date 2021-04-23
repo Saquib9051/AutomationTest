@@ -32,7 +32,7 @@ public class TC1Test extends TestBase {
 	
 	@Test(priority=2)
 	public void productPurchased() throws InterruptedException {
-		//tc1.productPurchase();
+		tc1.productPurchase();
 	}
 	
 	
