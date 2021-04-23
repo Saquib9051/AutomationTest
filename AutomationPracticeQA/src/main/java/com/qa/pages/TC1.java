@@ -9,7 +9,7 @@ import org.openqa.selenium.support.ui.Select;
 
 import com.qa.base.TestBase;
 
-//@Author= Saquib 
+//@Author= Saquib Helal
 public class TC1 extends TestBase {
 	
 	//Page Factory - OR
