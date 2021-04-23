@@ -7,6 +7,7 @@ import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.Select;
+import org.testng.Assert;
 
 import com.qa.base.TestBase;
 
@@ -136,21 +137,26 @@ public class TC1 extends TestBase {
 		String sizeOfDress2= dressSize2.getText();
 		System.out.println(sizeOfDress2);
 		String unitCost= unitPrice.getText().substring(1);
-		System.out.println("Cost of First product " +unitCost);
+		System.out.println(unitCost);
+		Assert.assertEquals(unitCost, "26.00");
 		String unitCost2= unitPrice2.getText().substring(1);
-		System.out.println("Cost of Second Product " +unitCost2);
+		System.out.println(unitCost2);
+		Assert.assertEquals(unitCost2, "50.99");
 		Double sumOfproduct= Double.parseDouble(unitCost);
-		System.out.println("First item cost: "+sumOfproduct);
+		System.out.println(sumOfproduct);
 		Double sumPro= Double.parseDouble(unitCost2);
-		System.out.println("Second item cost: "+sumPro);
-		System.out.println("Total of two items value are:" +Double.sum(sumOfproduct,sumPro));
+		System.out.println(sumPro);
+		System.out.println(Double.sum(sumOfproduct,sumPro));
 		
 		String productTotal= totalProduct.getText();
 		System.out.println(productTotal);
+		Assert.assertEquals(productTotal, "$76.99");
 		String totalShippingCost= totalShipping.getText();
 		System.out.println(totalShippingCost);
+		Assert.assertEquals(totalShippingCost, "$2.00");
 		String totalAmountOfTheProduct= totalPrice.getText();
 		System.out.println(totalAmountOfTheProduct);
+		Assert.assertEquals(totalAmountOfTheProduct, "$78.99");
 		proceedToCheckout.click();
 		Thread.sleep(2000);
 		processAdd.click();
