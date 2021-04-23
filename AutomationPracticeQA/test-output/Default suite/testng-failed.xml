@@ -6,7 +6,6 @@
       <class name="com.qa.testcases.TC1Test">
         <methods>
           <include name="productPurchased"/>
-          <include name="login"/>
           <include name="setUp"/>
           <include name="tearDown"/>
         </methods>

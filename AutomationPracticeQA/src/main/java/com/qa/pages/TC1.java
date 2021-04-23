@@ -3,6 +3,7 @@ package com.qa.pages;
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.Select;
@@ -25,7 +26,7 @@ public class TC1 extends TestBase {
 	@FindBy(xpath="//div[contains(text(),'Categories')]//following-sibling::ul/li[2]/a[@title='Dresses']")
 	WebElement dress;
 	
-	@FindBy(xpath="//ul[@class='product_list grid row']/li[1]//span[contains(text(),'Quick view')]")
+	@FindBy(xpath="//body/div[@id='page']/div[2]/div[1]/div[3]/div[2]/ul[1]/li[1]/div[1]/div[1]/div[1]/a[1]/img[1]")
 	WebElement quickView;
 	
 	@FindBy(id="group_1")
@@ -103,6 +104,9 @@ public class TC1 extends TestBase {
 		dress.click();
 		JavascriptExecutor jse = (JavascriptExecutor)driver;
 		jse.executeScript("window.scrollBy(0,780)");
+		Thread.sleep(3000);
+		
+		
 		quickView.click();
 		Thread.sleep(5000);
 		driver.switchTo().frame(driver.findElement(By.tagName("iframe")));
