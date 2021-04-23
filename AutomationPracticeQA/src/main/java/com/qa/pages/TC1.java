@@ -26,7 +26,7 @@ public class TC1 extends TestBase {
 	@FindBy(xpath="//div[contains(text(),'Categories')]//following-sibling::ul/li[2]/a[@title='Dresses']")
 	WebElement dress;
 	
-	@FindBy(xpath="//body/div[@id='page']/div[2]/div[1]/div[3]/div[2]/ul[1]/li[1]/div[1]/div[1]/div[1]/a[1]/img[1]")
+	@FindBy(xpath="//ul[@class='product_list grid row']/li[1]//span[contains(text(),'Quick view')]")
 	WebElement quickView;
 	
 	@FindBy(id="group_1")
@@ -38,7 +38,7 @@ public class TC1 extends TestBase {
 	@FindBy(xpath="//span[@title='Continue shopping']//span[1]")
 	WebElement continueShopping;
 	
-	@FindBy(xpath="//body/div[@id='page']/div[2]/div[1]/div[3]/div[2]/ul[1]/li[2]/div[1]/div[1]/div[1]/a[1]/img[1]")
+	@FindBy(xpath="//ul[@class='product_list grid row']/li[2]//span[contains(text(),'Quick view')]")
 	WebElement quickView2;
 	
 	@FindBy(xpath="//span[contains(text(),'Proceed to checkout')]")
@@ -105,8 +105,8 @@ public class TC1 extends TestBase {
 		JavascriptExecutor jse = (JavascriptExecutor)driver;
 		jse.executeScript("window.scrollBy(0,780)");
 		Thread.sleep(3000);
-		
-		
+		Actions act= new Actions(driver);
+		act.moveToElement(driver.findElement(By.xpath("//body/div[@id='page']/div[2]/div[1]/div[3]/div[2]/ul[1]/li[1]/div[1]/div[1]/div[1]/a[1]/img[1]"))).build().perform();
 		quickView.click();
 		Thread.sleep(5000);
 		driver.switchTo().frame(driver.findElement(By.tagName("iframe")));
@@ -117,6 +117,10 @@ public class TC1 extends TestBase {
 		Thread.sleep(6000);
 		continueShopping.click();
 		driver.navigate().back();
+		Thread.sleep(2000);
+		Actions actions2= new Actions(driver);
+		actions2.moveToElement(driver.findElement(By.xpath("//body/div[@id='page']/div[2]/div[1]/div[3]/div[2]/ul[1]/li[2]/div[1]/div[1]/div[1]/a[1]/img[1]"))).build().perform();
+		
 		quickView2.click();
 		Thread.sleep(2000);
 		driver.switchTo().frame(driver.findElement(By.tagName("iframe")));
